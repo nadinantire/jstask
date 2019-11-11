@@ -16,8 +16,9 @@ new Vue({
   // In methods, describe the method you want to use for the instance of Vue.js
   methods: {
     addStudent: function() {
-        // AddStudent method in this function () {}
-        // Write the processing of (a function in which the value entered in the input field and a ID value (ID value + 1 value registered last) newly appears)
+      let element = this.students[this.students.length - 1];
+      let new_id = element.id + 1;
+      return this.students.push({ id: new_id, name: this.name, course: this.course, acceptancePeriod: this.acceptancePeriod })
     }
   }
 })
